@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["cwh"]
+}
+
+// 用户状态枚举
+enum account_status {
+  active // 激活
+  pending // 待激活
+  suspended // 封禁
+  terminating // 注销冷静期中
+  deleted // 永久删除
+
+  @@schema("cwh")
+}
+
+// 验证类型枚举
+enum verification_type {
+  register // 注册激活
+  verify // 邮箱验证
+  null // 未指定
+
+  @@schema("cwh")
+}
+
+enum change_frequency_type {
+  always
+  hourly
+  daily
+  weekly
+  monthly
+  yearly
+  never
+
+  @@schema("cwh")
+}
+
+// 用户表
+model users {
+  id               String         @id @default(dbgenerated("uuidv7()")) @db.Uuid
+  username         String         @unique @db.VarChar(30)
+  username_display String         @unique @db.VarChar(30)
+  nickname         String         @db.VarChar(30)
+  email            String         @unique @db.VarChar(255)
+  password_hash    String         @db.Text
+  status           account_status @default(pending)
+  created_at       DateTime       @default(now()) @db.Timestamptz(6)
+
+  // 外键反向关联
+  sessions            sessions[]            @relation("userSessions")
+  verification_tokens verification_tokens[] @relation("userVerificationTokens")
+
+  @@index([created_at])
+  @@schema("cwh")
+}
+
+// 会话表
+model sessions {
+  id           String   @id @default(dbgenerated("uuidv7()")) @db.Uuid
+  user_id      String   @db.Uuid
+  token        String   @unique @db.Text
+  expires_at   DateTime @db.Timestamptz(6)
+  grace_period Int      @default(0)
+
+  // 外键关联（级联删除）
+  user users @relation("userSessions", fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([expires_at])
+  @@map("sessions")
+  @@schema("cwh")
+}
+
+// 验证邮箱 Token 表
+model verification_tokens {
+  id         String            @id @default(dbgenerated("uuidv7()")) @db.Uuid
+  user_id    String            @db.Uuid
+  token      String            @unique @db.Text
+  type       verification_type @default(null)
+  expires_at DateTime          @default(dbgenerated("(now() + '1 hour'::interval)")) @db.Timestamptz(6)
+
+  // 外键关系（级联删除）
+  user users @relation("userVerificationTokens", fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([expires_at])
+  @@map("verification_tokens")
+  @@schema("cwh")
+}
+
+// 页面 Metadata 表
+model page_metadata {
+  id               Int                   @id @default(autoincrement())
+  locale           String                @db.Text
+  path             String                @unique @db.Text
+  update_at        DateTime              @default(dbgenerated("now()")) @db.Timestamptz(6)
+  change_frequency change_frequency_type @default(always)
+  priority         Float                 @default(50)
+
+  @@map("page_metadata")
+  @@schema("cwh")
+}

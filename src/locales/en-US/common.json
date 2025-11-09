@@ -1,0 +1,47 @@
+{
+  "register": {
+    "title": "Sign Up",
+    "subtitle": "Create your account",
+    "username": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "registerButton": "Sign Up",
+    "registering": "Signing up...",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Sign in now",
+    "verificationEmailSent": "A verification email has been sent to your inbox. Please check your email and click the link to complete verification.",
+    "backToLogin": "Back to Login",
+    "errors": {
+      "usernameRequired": "Username must be at least 3 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "passwordMismatch": "Passwords do not match",
+      "submitFailed": "Submission failed, please try again later"
+    },
+    "success": "Sign up successful!"
+  },
+  "login": {
+    "title": "Sign In",
+    "subtitle": "Welcome back",
+    "usernameOrEmail": "Username or Email",
+    "usernameOrEmailPlaceholder": "Enter your username or email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "loginButton": "Sign In",
+    "loggingIn": "Signing in...",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign up now",
+    "errors": {
+      "usernameOrEmailRequired": "Please enter your username or email",
+      "passwordRequired": "Please enter your password",
+      "submitFailed": "Login failed, please try again later"
+    },
+    "success": "Login successful!"
+  }
+}

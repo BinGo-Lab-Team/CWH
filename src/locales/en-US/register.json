@@ -1,0 +1,45 @@
+{
+  "title": "Register Account",
+  "usernamePlaceholder": "Username",
+  "nicknamePlaceholder": "Nickname",
+  "emailPlaceholder": "Email",
+  "passwordPlaceholder": "Password",
+  "confirmPasswordPlaceholder": "Confirm Password",
+  "registerButton": "Register",
+  "registering": "Registering...",
+  "hasAccount": "Already have an account?",
+  "loginLink": "Go to Login",
+  "backToLogin": "Back to Login",
+  "verificationEmailSent": "A verification email has been sent. Please check your inbox.",
+  "verificationEmailSendFailedTip": "Registration succeeded, but sending the verification email failed. Please go to Login to resend the email.",
+
+  "backend": {
+    "ERR_INPUT_INVALID": "Invalid input",
+    "ERR_USER_TAKEN": "Username or email has already been registered",
+    "ERR_SERVER_BUSY": "Server is busy. Please try again later",
+    "ERR_SEND_EMAIL_FAILED": "Failed to send verification email",
+    "REGISTRATION_SUCCESSFUL": "Registration successful",
+    "SUBMIT_FAILED": "Submission failed. Please try again",
+
+    "errors": {
+      "ERR_USERNAME_TAKEN": "This username is already taken",
+      "ERR_EMAIL_TAKEN": "This email is already in use",
+
+      "ERR_USERNAME_TOO_SHORT": "Username must be at least 3 characters",
+      "ERR_USERNAME_TOO_LONG": "Username must be at most 30 characters",
+      "ERR_USERNAME_INVALID_CHARACTERS": "Username can only contain letters, numbers, and -",
+      "ERR_USERNAME_INVALID_DASH_POSITION": "Username must start and end with a letter or number and cannot contain --",
+
+      "ERR_NICKNAME_TOO_SHORT": "Nickname must be at least 1 character",
+      "ERR_NICKNAME_TOO_LONG": "Nickname must be at most 30 characters",
+      "ERR_NICKNAME_CONTAINS_CONTROL_CHAR": "Nickname contains invalid control characters",
+      "ERR_NICKNAME_CONTAINS_FORBIDDEN_SYMBOL": "Nickname cannot contain < > & \" ' / ; #",
+
+      "ERR_INVALID_EMAIL": "Invalid email format",
+
+      "ERR_PASSWORD_TOO_SHORT": "Password must be at least 8 characters",
+      "ERR_PASSWORD_TOO_LONG": "Password must be at most 255 characters",
+      "ERR_PASSWORD_MISMATCH": "The two passwords do not match"
+    }
+  }
+}

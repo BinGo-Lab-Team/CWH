@@ -1,0 +1,14 @@
+{
+	"title": "Login",
+	"usernameOrEmailPlaceholder": "Username or Email",
+	"passwordPlaceholder": "Password",
+	"forgotPassword": "Forgot password?",
+	"loginButton": "Log in",
+	"loggingIn": "Logging in...",
+	"noAccount": "Don't have an account?",
+	"registerLink": "Register",
+	"success": "Login successful!",
+	"errors": {
+		"submitFailed": "Submission failed. Please try again later."
+	}
+}

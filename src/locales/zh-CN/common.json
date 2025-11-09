@@ -1,0 +1,47 @@
+{
+  "register": {
+    "title": "注册",
+    "subtitle": "创建您的账号",
+    "username": "用户名",
+    "usernamePlaceholder": "请输入用户名",
+    "email": "邮箱",
+    "emailPlaceholder": "请输入邮箱地址",
+    "password": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "confirmPassword": "确认密码",
+    "confirmPasswordPlaceholder": "请再次输入密码",
+    "registerButton": "注册",
+    "registering": "注册中...",
+    "hasAccount": "已有账号？",
+    "loginLink": "立即登录",
+    "verificationEmailSent": "验证邮件已发送到您的邮箱，请查收并点击链接完成验证。",
+    "backToLogin": "返回登录",
+    "errors": {
+      "usernameRequired": "用户名至少需要3个字符",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "passwordTooShort": "密码至少需要6个字符",
+      "passwordMismatch": "两次输入的密码不一致",
+      "submitFailed": "提交失败，请稍后重试"
+    },
+    "success": "注册成功！"
+  },
+  "login": {
+    "title": "登录",
+    "subtitle": "欢迎回来",
+    "usernameOrEmail": "用户名或邮箱",
+    "usernameOrEmailPlaceholder": "请输入用户名或邮箱",
+    "password": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "loginButton": "登录",
+    "loggingIn": "登录中...",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账号？",
+    "registerLink": "立即注册",
+    "errors": {
+      "usernameOrEmailRequired": "请输入用户名或邮箱",
+      "passwordRequired": "请输入密码",
+      "submitFailed": "登录失败，请稍后重试"
+    },
+    "success": "登录成功！"
+  }
+}

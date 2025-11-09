@@ -1,0 +1,46 @@
+{
+  "title": "注册账号",
+  "usernamePlaceholder": "用户名",
+  "nicknamePlaceholder": "昵称",
+  "emailPlaceholder": "邮箱",
+  "passwordPlaceholder": "密码",
+  "confirmPasswordPlaceholder": "确认密码",
+  "registerButton": "注册",
+  "registering": "正在注册...",
+  "hasAccount": "已经有账号？",
+  "loginLink": "去登录",
+  "backToLogin": "返回登录",
+  "verificationEmailSent": "验证邮件已发送，请检查您的邮箱。",
+  "verificationEmailSendFailedTip": "注册成功，但验证邮件发送失败，请前往登录以重新发送邮件。",
+
+  "backend": {
+    "ERR_INPUT_INVALID": "输入数据无效",
+    "ERR_USER_TAKEN": "用户名或邮箱已被注册",
+    "ERR_SERVER_BUSY": "服务器繁忙，请稍后再试",
+    "ERR_SEND_EMAIL_FAILED": "验证邮件发送失败",
+    "REGISTRATION_SUCCESSFUL": "注册成功",
+    "SUBMIT_FAILED": "提交失败，请重试",
+    "ERR_TURNSTILE_FAILED": "人机验证失败，请稍后重试",
+
+    "errors": {
+      "ERR_USERNAME_TAKEN": "该用户名已被占用",
+      "ERR_EMAIL_TAKEN": "该邮箱已被占用",
+
+      "ERR_USERNAME_TOO_SHORT": "用户名不能少于3个字符",
+      "ERR_USERNAME_TOO_LONG": "用户名不能长于30个字符",
+      "ERR_USERNAME_INVALID_CHARACTERS": "用户名只能包含数字、字母和-",
+      "ERR_USERNAME_INVALID_DASH_POSITION": "用户名只能以数字或字母开头和结尾，不能出现--",
+
+      "ERR_NICKNAME_TOO_SHORT": "昵称不能少于1个字符",
+      "ERR_NICKNAME_TOO_LONG": "昵称不能长于30个字符",
+      "ERR_NICKNAME_CONTAINS_CONTROL_CHAR": "昵称包含非法的不可见字符",
+      "ERR_NICKNAME_CONTAINS_FORBIDDEN_SYMBOL": "昵称不能包含 < > & \" ' / ; #",
+
+      "ERR_INVALID_EMAIL": "邮箱格式不正确",
+
+      "ERR_PASSWORD_TOO_SHORT": "密码不能少于8个字符",
+      "ERR_PASSWORD_TOO_LONG": "密码不能长于255个字符",
+      "ERR_PASSWORD_MISMATCH": "两次输入的密码不一致"
+    }
+  }
+}
